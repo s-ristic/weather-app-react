@@ -67,7 +67,7 @@ function Weather() {
       <CurrentTimeDate />
 
       {!error && currentWeather && <CurrentWeather data={currentWeather} />}
-      {!error && forecast && <Forecast data={forecast} />}
+      {!error && forecast && forecast.length > 0 && <Forecast data={forecast} />}
       {!error && air && <Air data={air} />}
 
       {isLoading && <Loading />}
